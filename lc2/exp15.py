@@ -1,0 +1,10 @@
+d = {'orange': 2, 'banana': 3, 'apple': 5}
+asc_keys = dict(sorted(d.items()))
+desc_keys = dict(sorted(d.items(), reverse=True))  
+asc_values = dict(sorted(d.items(), key=lambda item: item[1]))  
+desc_values = dict(sorted(d.items(), key=lambda item: item[1], reverse=True))  
+print("Dictionary:", d)
+print("Ascending Order (by keys):", asc_keys)
+print("Descending Order (by keys):", desc_keys)
+print("Ascending Order (by values):", asc_values)
+print("Descending Order (by values):", desc_values)
