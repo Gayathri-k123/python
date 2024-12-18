@@ -1,11 +1,9 @@
-import csv
+def read_file_into_list(filename):
+    with open(filename, 'r') as file:
+        lines = file.readlines()
+    return [line.strip() for line in lines]
 
-def read_csv_file(filename):
-    with open(filename, mode='r', newline='') as file:
-        reader = csv.reader(file)
-        for row in reader:
-            print(row)  # Each row is printed as a list of strings
+filename = "example.txt"
+lines_list = read_file_into_list(filename)
+print(lines_list)
 
-# Example usage
-csv_filename = "exam.csv"
-read_csv_file(csv_filename)
